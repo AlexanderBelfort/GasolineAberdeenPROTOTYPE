@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.mobile-1.4.5.js"></script>
+	<script>
+		$("#main").load('externalHtml.html', function () {
+    		$(this).trigger('create');
+		});
+	</script>
+	<script src="sortfunc.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="main" data-theme='b' data-shadow="false">
+	<div data-role="header" data-fullscreen="true">
+		<h1>Gasoline Aberdeen</h1>
+
+		<form class="ui-grid-c">
+			<div class="ui-block-a">
+				<label for="grid-select-2" class="ui-hidden-accessible">Sort By</label>
+				<select id="grid-select-2" name="grid-select-2" data-shadow="false" data-mini="true" data-corners="true">
+					<option>Sort By</option>
+					<option value="1">Low to high</option>
+					<option value="2">High to low</option>
+					<option value="3">Closest</option>
+				</select>
+			</div>
+			<div class="ui-block-b">
+				<label for="grid-select-2" class="ui-hidden-accessible">Fuel Type</label>
+				<select id="grid-select-2" name="grid-select-2" data-shadow="false" data-mini="true" data-corners="true">
+					<option>Fuel Type</option>
+					<option value="1">Petrol</option>
+					<option value="2">Diesel</option>
+					<option value="3">Electric</option>
+				</select>
+			</div>
+		</form>
+	</div>
+
+	<div role="main" class="ui-content ui-responsive">
+	<div class='menu'>
+
+
+<table class="sortable">
+<thead>
+<tr style="background-color: #ebebeb;">
+<th class="header" id="changedd">NAME</th>
+<th class="header" id="changedd">PRICE(GBP)</th>
+<th class="header" id="changedd">DISTANCE(KM)</th>
+
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>ASDA</td>
+<td>121.7</td>
+<td>10</td>
+
+</tr>
+
+<tr>
+<td>SHELL</td>
+<td>128.1</td>
+<td>30</td>
+</tr>
+
+<tr>
+<td>TESCO</td>
+<td>125.7</td>
+<td>12</td>
+</tr>
+
+<tr>
+<td>MORRISONS</td>
+<td>122.8</td>
+<td>7</td>
+
+</tr>
+
+</tbody>
+</table>
+	
+	</div>
+	</div><!-- /content -->
+
+	<!-- sticks the navbar to the bottom of the screen -->
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+		<ul>
+			<li><a href="map3.html" rel="external" id="home" data-icon="home"></a></li>
+			<li><a href="#" id="profile" data-icon="user"></a></li>
+			<li><a href="#" id="settings" data-icon="gear"></a></li>
+		</ul>
+		</div>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+</body>
+</html>

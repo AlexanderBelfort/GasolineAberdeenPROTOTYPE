@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.mobile-1.4.5.js"></script>
+	<script>
+		$("#main").load('externalHtml.html', function () {
+    		$(this).trigger('create');
+		});
+		
+		
+		///function SubmitForm() {
+			///var uname = $(['name="username"']).val();
+			///var email = $([
+	</script>
+	
+	
+	
+		<script>
+	
+		function submitForm() {
+			alert("Submitted");
+		}
+	
+	
+	
+	</script>
+	
+	<style>
+		input.smallerCheckbox {
+		
+		width: 20px;
+		height: 20px;
+		position: relative;
+		
+		}
+	
+	
+	</style>
+	
+	
+</head>
+<body>
+
+
+<script>
+	function showPass() {
+	
+		var x = document.getElementById("parola");
+		
+		if (x.type === "password") {
+			x.type = "text";
+		} else
+		
+		{
+			x.type = "password";
+		}
+	
+	
+	
+	}
+
+
+</script>
+	
+	<div data-role="page" id="page1">
+		<div data=role="header">
+			<h2 align="center" class="ui-btn ui-btn-b"><a href = "index.html" rel="external"> Register an Account</a></h2>
+			
+		</div>
+		
+		<div data-role="content">
+			<form method="post" action="connect.php" onSubmit="return submitForm()">
+			
+				<label class="ui-hidden-accessible">USERNAME</label><input name="username" type="text" placeholder="Username">
+				<label class ="ui-hidden-accessible">PASSWORD</label><input name="password" type="password" id="parola" placeholder="Password">
+				
+				<input type="checkbox" class="smallerCheckbox" onclick="showPass()"><h4>Show Password</h4>
+				<input type="submit" value="Submit">
+			</form>
+		
+		
+	</div>
+	
+	
+	
+	
+
+</body>

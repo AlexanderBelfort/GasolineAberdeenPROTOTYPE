@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!--We will be using jquery mobile to implement-->
+<!--our functionalities-->
+<!--it will be used on android-->
+<!--But can be converted on iOS and Windows-->
+
+
+
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.mobile-1.4.5.js"></script>
+	<script>
+		$("#main").load('externalHtml.html', function () {
+    		$(this).trigger('create');
+		});
+	</script>
+</head>
+<body>
+<!--we will use classic-->
+<!--simple UI design-->
+<!--for skeletal prototypical-->
+<!--purposes-->
+<!--it wil be dark and gloomy to-->
+<!--show aberdeen's aesthetics-->
+<div data-role="page" id="main" data-theme='b' data-shadow="false">
+	<div data-role="header" data-fullscreen="true">
+		<h1>Gasoline Aberdeen</h1>
+
+		<form class="ui-grid-c">
+			<div class="ui-block-a">
+				<label for="grid-select-2" class="ui-hidden-accessible">Sort By</label>
+				<select id="grid-select-2" name="grid-select-2" data-shadow="false" data-mini="true" data-corners="true">
+					<option>Sort By</option> <!--random filtering application-->
+					<option value="1">Low to high</option>
+					<option value="2">High to low</option>
+					<option value="3">Closest</option>
+				</select>
+			</div>
+			<div class="ui-block-b">
+				<label for="grid-select-2" class="ui-hidden-accessible">Fuel Type</label>
+				<select id="grid-select-2" name="grid-select-2" data-shadow="false" data-mini="true" data-corners="true">
+					<option>Fuel Type</option> <!--We will input / filter our different fuels-->
+					<option value="1">Petrol</option> 
+					<option value="2">Diesel</option>
+					<option value="3">Electric</option>
+				</select>
+			</div>
+		</form>
+	</div>
+
+	<div role="main" class="ui-content ui-responsive">
+	<div class='menu'>
+	<!--We have implemented a javascript-->
+	<!--that will sort tables-->
+	<!--bottom up-->
+	<!--and vice versa-->
+	<table class="sortable"> 
+
+
+</table>
+
+
+    <a href="ssorted.html" rel="external" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-icon"><img src="icon.png" width="60" height="60" align="left">SORT!</a>
+
+
+    <a href="map.html" rel="external" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-asda"><img src="icons/asda.png" width="60" height="60" align="left">Price:121.7	<br>	Distance:10</a>
+
+    
+	<a href="map2.html" rel="external" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-morrisons"><img src="icons/morrisons.png" width="60" height="60" align="left">Price:128.1	<br>	Distance:30</a>
+    
+	<a href="map4.html" rel="external" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-shell"><img src="icons/shell.png" width="60" height="60" align="left">Price:125.7	<br>	Distance:12</a>
+    
+	<a href="map5.html" rel="external" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-tesco"><img src="icons/tesco.png" width="60" height="60" align="left">Price:122.8	<br>	Distance:7</a>
+
+	
+	</div>
+	</div><!-- /content -->
+
+	<!-- sticks the navbar to the bottom of the screen -->
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+		<ul>
+			<li><a href="map3.html" rel="external" id="home" data-icon="home"></a></li>
+			<li><a href="register.html" rel="external" id="profile" data-icon="user"></a></li>
+			<li><a href="#" id="settings" data-icon="gear"></a></li>
+		</ul>
+		</div>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+</body>
+</html>
